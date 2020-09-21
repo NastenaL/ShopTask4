@@ -5,7 +5,7 @@
 
     interface IAllCars
     {
-        IEnumerable<Car> Cars { get; set; }
+        IEnumerable<Car> Cars { get; }
         IEnumerable<Car> GetFavoriteCars { get; set; }
         Car GetCar { get; set; }
     }

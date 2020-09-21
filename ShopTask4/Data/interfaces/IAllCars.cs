@@ -3,7 +3,7 @@
     using ShopTask4.Data.Models;
     using System.Collections.Generic;
 
-    interface IAllCars
+    public interface IAllCars
     {
         IEnumerable<Car> Cars { get; }
         IEnumerable<Car> GetFavoriteCars { get; set; }

@@ -3,6 +3,8 @@
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.DependencyInjection;
+    using ShopTask4.Data.interfaces;
+    using ShopTask4.Data.mocks;
 
     public class Startup
     {
@@ -11,7 +13,8 @@
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-
+            services.AddTransient<IAllCars, MockCars>();
+            services.AddTransient<ICarsCategory, MockCategory>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

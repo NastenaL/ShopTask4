@@ -3,7 +3,7 @@
     using ShopTask4.Data.Models;
     using System.Collections.Generic;
 
-    interface ICarsCategory
+    public interface ICarsCategory
     {
        IEnumerable<Category> AllCategories { get; }
     }

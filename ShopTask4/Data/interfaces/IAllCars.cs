@@ -6,7 +6,7 @@
     public interface IAllCars
     {
         IEnumerable<Car> Cars { get; }
-        IEnumerable<Car> GetFavoriteCars { get; set; }
-        Car GetCar { get; set; }
+        IEnumerable<Car> GetFavoriteCars { get;  }
+        Car GetCar(int carId);
     }
 }

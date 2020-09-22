@@ -16,6 +16,7 @@
 
         public ViewResult List()
         {
+            ViewBag.Category = "Some new";
             var cars = allCars.Cars;
             return View(cars);
         }

@@ -14,7 +14,7 @@
                 {
                     new Category {CategoryName = "Electro", Description = "Ecologic type of cars"},
                     new Category{ CategoryName = "Patrol", Description ="Classical type of cars"}
-                }
+                };
             }
             
         }

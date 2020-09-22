@@ -1,0 +1,28 @@
+﻿@using ShopTask4.Data.Models
+@model  IEnumerable<Car>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>List</title>
+</head>
+<body>
+    <h2> All cars</h2>
+    @{ 
+        foreach(var car in Model)
+        {
+            <div>
+                <h2> Model: @car.Name</h2>
+                <p>Price: @car.Price</p>
+
+            </div>
+        }
+    }
+</body>
+</html>

@@ -6,7 +6,7 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    public class MockCars : IAllCars
+    public class MockCars
     {
         private readonly ICarsCategory categoryCars = new MockCategory();
         public IEnumerable<Car> Cars {

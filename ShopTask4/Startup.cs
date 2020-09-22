@@ -35,6 +35,12 @@
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
+
+            using (var scope = app.ApplicationServices.CreateScope())
+            {
+                AddDBContent content = scope.ServiceProvider.GetRequiredService<AddDBContent>();
+                DbObjects.Initial(content);
+            }
         }
     }
 }

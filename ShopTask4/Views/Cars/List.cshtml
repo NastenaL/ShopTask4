@@ -1,29 +1,11 @@
-﻿@using ShopTask4.ViewModels
-@model CarsListViewModel
+﻿<h3>@Model.CarCategory</h3>
+@{ 
+    foreach(var car in Model.AllCars)
+    {
+        <div>
+            <h2> Model: @car.Name</h2>
+            <p>Price: @car.Price</p>
 
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>List</title>
-</head>
-<body>
-    <h3>@Model.CarCategory</h3>
-    <h2> All cars</h2>
-    @{ 
-        foreach(var car in Model.AllCars)
-        {
-            <div>
-                <h2> Model: @car.Name</h2>
-                <p>Price: @car.Price</p>
-
-            </div>
-        }
+        </div>
     }
-</body>
-</html>
+} 

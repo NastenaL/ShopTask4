@@ -17,6 +17,7 @@
 
         public ViewResult List()
         {
+            ViewBag.Title = "Page with autos";
             CarsListViewModel obj = new CarsListViewModel();
             obj.AllCars = allCars.Cars;
             obj.CarCategory = "Autos";

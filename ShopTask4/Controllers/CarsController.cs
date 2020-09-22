@@ -2,6 +2,7 @@
 {
     using Microsoft.AspNetCore.Mvc;
     using ShopTask4.Data.interfaces;
+    using ShopTask4.ViewModels;
 
     public class CarsController : Controller
     {
@@ -16,9 +17,10 @@
 
         public ViewResult List()
         {
-            ViewBag.Category = "Some new";
-            var cars = allCars.Cars;
-            return View(cars);
+            CarsListViewModel obj = new CarsListViewModel();
+            obj.AllCars = allCars.Cars;
+            obj.CarCategory = "Autos";
+            return View(obj);
         }
     }
 }

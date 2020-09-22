@@ -1,11 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace ShopTask4.Data.Repository
+﻿namespace ShopTask4.Data.Repository
 {
-    public class CategoryRepository :
+    using ShopTask4.Data.Models;
+    using System.Collections.Generic;
+    using ShopTask4.Data.interfaces;
+
+    public class CategoryRepository : ICarsCategory
     {
+        private readonly AddDBContent addDBContent;
+
+        public CategoryRepository(AddDBContent addDBContent)
+        {
+            this.addDBContent = addDBContent;
+        }
+
+        public IEnumerable<Category> AllCategories => addDBContent.Category;
     }
 }

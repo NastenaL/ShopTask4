@@ -7,7 +7,7 @@
     using Microsoft.Extensions.DependencyInjection;
     using ShopTask4.Data;
     using ShopTask4.Data.interfaces;
-    using ShopTask4.Data.mocks;
+    using ShopTask4.Data.Repository;
 
     public class Startup
     {
@@ -24,8 +24,8 @@
         {
             services.AddDbContext<AddDBContent>(options => options.UseSqlServer(confString.GetConnectionString("DefaultConnection")));
             services.AddMvc();
-            services.AddTransient<IAllCars, MockCars>();
-            services.AddTransient<ICarsCategory, MockCategory>();
+            services.AddTransient<IAllCars, CarRepository>();
+            services.AddTransient<ICarsCategory, CategoryRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
